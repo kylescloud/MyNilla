@@ -1,0 +1,39 @@
+{
+  "name": "base-alpha-arb",
+  "version": "1.0.0",
+  "description": "Advanced flash loan arbitrage bot for Base chain",
+  "main": "src/bot.js",
+  "scripts": {
+    "start": "node src/bot.js",
+    "deploy": "npx hardhat run scripts/deploy.js --network base",
+    "deploy:testnet": "npx hardhat run scripts/deploy.js --network base_sepolia",
+    "verify": "npx hardhat verify --network base",
+    "update-tokens": "node scripts/updateTokens.js",
+    "test": "npx hardhat test",
+    "compile": "npx hardhat compile"
+  },
+  "dependencies": {
+    "ethers": "^6.11.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0",
+    "chalk": "^4.1.2",
+    "node-cache": "^5.1.2",
+    "p-limit": "^5.0.0",
+    "bottleneck": "^2.19.5",
+    "web3": "^1.10.0",
+    "@aave/core-v3": "^3.2.0",
+    "@openzeppelin/contracts": "^4.9.6",
+    "@opentelemetry/exporter-prometheus": "^0.45.0",
+    "@opentelemetry/sdk-metrics": "^1.17.0",
+    "nodemailer": "^6.9.7",
+    "prom-client": "^14.2.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "hardhat": "^2.19.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.8.0"
+  }
+}
