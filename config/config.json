@@ -1,0 +1,61 @@
+{
+  "chainId": 8453,
+  "networkName": "base",
+  "botWallet": "",
+  "minProfitThresholdUSD": 10,
+  "maxGasPriceGwei": 50,
+  "flashLoanPremiumBps": 9,
+  "aaveV3PoolAddress": "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5",
+  "rpcNodes": [
+    "https://mainnet.base.org",
+    "https://base-mainnet.public.blastapi.io",
+    "https://base.gateway.tenderly.co",
+    "https://base-rpc.publicnode.com",
+    "https://1rpc.io/base",
+    "https://base.blockpi.network/v1/rpc/public",
+    "https://base.drpc.org",
+    "https://rpc.base.org"
+  ],
+  "rpcSettings": {
+    "requestTimeoutMs": 10000,
+    "healthCheckIntervalMs": 30000,
+    "unhealthyTimeoutMs": 60000,
+    "maxRequestsPerSecond": 10,
+    "maxRequestsPerMinute": 300
+  },
+  "apiRateLimits": {
+    "dexScreener": {
+      "requestsPerMinute": 30,
+      "burst": 5
+    },
+    "oneInch": {
+      "requestsPerMinute": 60,
+      "burst": 10
+    },
+    "odos": {
+      "requestsPerMinute": 120,
+      "burst": 20
+    },
+    "cow": {
+      "requestsPerMinute": 30,
+      "burst": 5
+    }
+  },
+  "aggregatorPriority": ["odos", "oneInch", "cow"],
+  "baseTokens": [
+    "0x4200000000000000000000000000000000000006",
+    "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22"
+  ],
+  "monitoredDexes": [
+    "Aerodrome",
+    "PancakeSwap",
+    "Uniswap V3",
+    "Baseswap"
+  ],
+  "zScoreSettings": {
+    "windowSize": 100,
+    "entryThreshold": 2.0,
+    "exitThreshold": 0.5
+  }
+}
